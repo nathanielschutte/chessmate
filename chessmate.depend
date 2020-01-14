@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1578965002 source:c:\users\nate\documents\projects\chessmate\src\chess.cpp
+
+1579031553 source:c:\users\nate\documents\projects\chessmate\src\main.cpp
+	"CME/FileLogger.h"
+
+1579031430 c:\users\nate\documents\projects\chessmate\src\cme\filelogger.h
+	<fstream>
+	<string.h>
+	<string>
+
