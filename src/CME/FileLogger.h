@@ -1,3 +1,8 @@
+/**
+ * FileLogger header
+ *
+ */
+
 #ifndef FILELOGGER_H
 #define FILELOGGER_H
 

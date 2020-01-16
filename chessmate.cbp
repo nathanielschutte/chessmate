@@ -43,7 +43,11 @@
 		</Compiler>
 		<Unit filename="src/CME/FileLogger.cpp" />
 		<Unit filename="src/CME/FileLogger.h" />
+		<Unit filename="src/CME/IPlayer.cpp" />
+		<Unit filename="src/CME/IPlayer.h" />
+		<Unit filename="src/CME/version.h" />
 		<Unit filename="src/chess.cpp" />
+		<Unit filename="src/chess.h" />
 		<Unit filename="src/main.cpp" />
 		<Extensions>
 			<code_completion />

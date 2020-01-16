@@ -8,6 +8,7 @@
  */
 
 #include "CME/FileLogger.h"
+#include "CME/
 
 using namespace CME;
 
@@ -17,9 +18,13 @@ int main(int argc, char* argv[]) {
 
     FileLogger logger("output.txt", true);
 
-    logger.logMessage("main.cpp logging message!");
+    // InputHandler input_handler
 
-    logger.logMessage(__FILE__, __LINE__, "message produced here!");
+    // StateHandler state_handler
+
+    // GameChess chess(logger, input_handler, state_handler);
+
+    exitCode = chess.runGame(logger);
 
     return exitCode;
 }
