@@ -5,12 +5,15 @@
 
 #include "IPlayer.h"
 
-IPlayer::IPlayer(char* name)
-{
 
-}
+namespace CME {
+    IPlayer::IPlayer(char* name)
+    {
 
-IPlayer::~IPlayer()
-{
-    //dtor
+    }
+
+    IPlayer::~IPlayer()
+    {
+        //dtor
+    }
 }

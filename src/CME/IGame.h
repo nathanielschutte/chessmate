@@ -4,7 +4,9 @@
 #include <SFML/Graphics.hpp>
 
 #include "FileLogger.h"
-#include "IPlayer.h"
+#include "InputHandler.h"
+#include "StateHandler.h"
+#include "IState.h"
 
 namespace CME {
     class IGame {
@@ -19,9 +21,9 @@ namespace CME {
 
             FileLogger logger;
 
-            // InputHandler input_handler
+            InputHandler input_handler
 
-            // StateHandler state_handler
+            StateHandler state_handler
 
             IState state_cur;
 

@@ -7,8 +7,7 @@
  *
  */
 
-#include "CME/FileLogger.h"
-#include "CME/
+#include "CME/Chess.h"
 
 using namespace CME;
 
@@ -18,11 +17,11 @@ int main(int argc, char* argv[]) {
 
     FileLogger logger("output.txt", true);
 
-    // InputHandler input_handler
+    InputHandler input_handler
 
-    // StateHandler state_handler
+    StateHandler state_handler
 
-    // GameChess chess(logger, input_handler, state_handler);
+    GameChess chess(logger, input_handler, state_handler);
 
     exitCode = chess.runGame(logger);
 

@@ -41,10 +41,21 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="src/CME.h" />
 		<Unit filename="src/CME/FileLogger.cpp" />
 		<Unit filename="src/CME/FileLogger.h" />
+		<Unit filename="src/CME/IGame.cpp" />
+		<Unit filename="src/CME/IGame.h" />
 		<Unit filename="src/CME/IPlayer.cpp" />
 		<Unit filename="src/CME/IPlayer.h" />
+		<Unit filename="src/CME/IState.cpp" />
+		<Unit filename="src/CME/IState.h" />
+		<Unit filename="src/CME/InputHandler.cpp" />
+		<Unit filename="src/CME/InputHandler.h" />
+		<Unit filename="src/CME/StateGame.cpp" />
+		<Unit filename="src/CME/StateGame.h" />
+		<Unit filename="src/CME/StateHandler.cpp" />
+		<Unit filename="src/CME/StateHandler.h" />
 		<Unit filename="src/CME/version.h" />
 		<Unit filename="src/chess.cpp" />
 		<Unit filename="src/chess.h" />
