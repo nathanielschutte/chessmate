@@ -1,0 +1,15 @@
+ - all chess pieces
+ - board (600x600)
+ - menu buttons
+   - start
+   - quit
+   - "singleplayer vs. computer"
+   - "offline player vs. player"
+   - "online player vs player"
+   - "create game"
+   - "join game"
+   - surrender
+   - pause (graphic)
+   - resume (graphic)
+ - font
+ 
