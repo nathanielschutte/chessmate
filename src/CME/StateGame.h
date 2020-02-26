@@ -1,12 +1,14 @@
 #ifndef STATEGAME_H
 #define STATEGAME_H
 
+#include "IState.h"
+
 namespace CME {
     class StateGame : public IState
     {
         public:
             StateGame();
-            virtual ~StateGame();
+            ~StateGame();
 
         protected:
 

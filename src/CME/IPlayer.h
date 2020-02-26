@@ -57,11 +57,6 @@ namespace CME {
              */
             void incLosses(void) { ++m_losses; }
 
-            /** Access m_pieces_taken
-             * \return The current value of m_pieces_taken
-             */
-            unsigned int getPiecesTaken() { return m_pieces_taken; }
-
             /** Access m_userid
              * \return The current value of m_userid
              */

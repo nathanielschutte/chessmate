@@ -7,23 +7,26 @@
  *
  */
 
-#include "CME/Chess.h"
-
-using namespace CME;
+#include <assert.h>
+#include <stddef.h>
+#include "GameChess.h"
 
 int main(int argc, char* argv[]) {
 
     int exitCode = 0;
 
-    FileLogger logger("output.txt", true);
+    CME::FileLogger logger("output.txt", true);
+    logger.setActive(true);
 
-    InputHandler input_handler
+    GameChess* chess = new(std::nothrow) GameChess();
+    assert(NULL != chess && "main() failed to create game");
 
-    StateHandler state_handler
+    exitCode = chess->runGame();
 
-    GameChess chess(logger, input_handler, state_handler);
-
-    exitCode = chess.runGame(logger);
+    delete chess;
+    chess = NULL;
 
     return exitCode;
 }
+
+

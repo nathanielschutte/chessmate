@@ -4,22 +4,23 @@
 	"IPlayer.h"
 	"chess.h"
 
-1579146443 source:c:\users\nate\documents\projects\chessmate\src\main.cpp
-	"CME/FileLogger.h"
-	"chess.h"
+1580102699 source:c:\users\nate\documents\projects\chessmate\src\main.cpp
+	<assert.h>
+	<stddef.h>
+	"GameChess.h"
 
-1579126428 c:\users\nate\documents\projects\chessmate\src\cme\filelogger.h
+1580102572 c:\users\nate\documents\projects\chessmate\src\cme\filelogger.h
 	<fstream>
 	<string.h>
 	<string>
 
-1579126407 source:c:\users\nate\documents\projects\chessmate\src\cme\filelogger.cpp
+1580102525 source:c:\users\nate\documents\projects\chessmate\src\cme\filelogger.cpp
 	"FileLogger.h"
 
-1579128797 source:c:\users\nate\documents\projects\chessmate\src\cme\iplayer.cpp
+1579206323 source:c:\users\nate\documents\projects\chessmate\src\cme\iplayer.cpp
 	"IPlayer.h"
 
-1579140568 c:\users\nate\documents\projects\chessmate\src\cme\iplayer.h
+1580098260 c:\users\nate\documents\projects\chessmate\src\cme\iplayer.h
 
 1579203407 c:\users\nate\documents\projects\chessmate\src\cme\chess.h
 	"CME.h"
@@ -438,4 +439,42 @@
 	<SFML/Graphics.hpp>
 	"FileLogger.h"
 	"IPlayer.h"
+
+1579205959 source:c:\users\nate\documents\projects\chessmate\src\cme\inputhandler.cpp
+	"InputHandler.h"
+
+1579205935 c:\users\nate\documents\projects\chessmate\src\cme\inputhandler.h
+
+1579205074 source:c:\users\nate\documents\projects\chessmate\src\cme\istate.cpp
+	"IState.h"
+
+1579205061 c:\users\nate\documents\projects\chessmate\src\cme\istate.h
+
+1580098627 source:c:\users\nate\documents\projects\chessmate\src\cme\statehandler.cpp
+	"StateHandler.h"
+
+1580098619 c:\users\nate\documents\projects\chessmate\src\cme\statehandler.h
+
+1580102790 source:c:\users\nate\documents\projects\chessmate\src\cme\igame.cpp
+	"IGame.h"
+
+1580103497 c:\users\nate\documents\projects\chessmate\src\cme\igame.h
+	<SFML/Graphics.hpp>
+	"FileLogger.h"
+	"InputHandler.h"
+	"StateHandler.h"
+	"IState.h"
+
+1580105171 c:\users\nate\documents\projects\chessmate\src\gamechess.h
+	"CME/IGame.h"
+	<stdio.h>
+
+1579205099 source:c:\users\nate\documents\projects\chessmate\src\cme\stategame.cpp
+	"StateGame.h"
+
+1580099170 c:\users\nate\documents\projects\chessmate\src\cme\stategame.h
+	"IState.h"
+
+1580104925 source:c:\users\nate\documents\projects\chessmate\src\gamechess.cpp
+	"GameChess.h"
 

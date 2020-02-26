@@ -1,16 +1,24 @@
 #ifndef STATEHANDLER_H
 #define STATEHANDLER_H
 
+namespace CME {
 
-class StateHandler
-{
-    public:
-        StateHandler();
-        virtual ~StateHandler();
+    enum Request {Change, Reinit};
 
-    protected:
+    enum State {StartMenu, InGame, PostGame, Hold};
 
-    private:
-};
+    class StateHandler
+    {
+        public:
+            StateHandler();
+            virtual ~StateHandler();
+
+        void request(State state_req, Request type_req)
+
+        protected:
+
+        private:
+    };
+}
 
 #endif // STATEHANDLER_H

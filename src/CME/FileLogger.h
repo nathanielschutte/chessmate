@@ -41,7 +41,7 @@ namespace CME {
 
             FileLogger& operator=(const FileLogger&);
 
-    }; // class
-} // namespace CME
+    };
+}
 
 #endif // FILELOGGER_H

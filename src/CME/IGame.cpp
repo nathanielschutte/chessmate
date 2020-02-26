@@ -9,6 +9,4 @@ namespace CME {
     IGame::~IGame() {
         //dtor
     }
-
-
 }

@@ -9,13 +9,13 @@ namespace CME {
     FileLogger::FileLogger(const char* filename, bool def_log) {
         mFileStream.open(filename);
         if(mFileStream.is_open()) {
-            logMessage(__FILE__, __LINE__, "FileLogger::ctor()");
+            //logMessage(__FILE__, __LINE__, "FileLogger::ctor()");
         }
     }
 
     FileLogger::~FileLogger() {
         if(mFileStream.is_open()) {
-            logMessage(__FILE__, __LINE__, "FileLogger::dtor()");
+            //logMessage(__FILE__, __LINE__, "FileLogger::dtor()");
             mFileStream.close();
         }
     }

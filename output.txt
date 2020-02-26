@@ -1,3 +1,0 @@
-C:\Users\nate\Documents\projects\chessmate\src\CME\FileLogger.cpp:12:  FileLogger::ctor()
-Starting game...
-C:\Users\nate\Documents\projects\chessmate\src\CME\FileLogger.cpp:18:  FileLogger::dtor()

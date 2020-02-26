@@ -14,6 +14,13 @@ namespace CME {
     void update(sf::RenderWindow& window, const float time_delta);
 
     void draw(sf::RenderTarget& target, const float interp);
+
+
+    // private
+    int gameLoop(FileLo)
+
+    // references
+    FileLogger& logger;
 }
 
 

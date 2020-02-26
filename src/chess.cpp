@@ -9,7 +9,14 @@ namespace CME {
 
     const bool DEBUG = true;
 
-    int runGame(FileLogger& logger) {
+    int runGame(FileLogger& logger)
+    {
+
+    }
+
+
+    int gameLoop(FileLogger& logger)
+    {
 
         const float FPS = 60.0f;
         const float DELTA = 1.0f / FPS;
@@ -74,19 +81,21 @@ namespace CME {
         return 0;
     }
 
-    void update(sf::RenderWindow& window, const float time_delta) {
-
-        sf::Event event;
+    void update(sf::RenderWindow& window, const float time_delta)
+    {
+sf::Event event;
         while(window.pollEvent(event)) {
 
             if(event.type == sf::Event::Closed) {
                 window.close();
             }
         }
+
     }
 
 
-    void draw(sf::RenderTarget& target, const float interp) {
+    void draw(sf::RenderTarget& target, const float interp)
+    {
 
     }
 

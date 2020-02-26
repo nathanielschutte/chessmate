@@ -1,11 +1,20 @@
 #include "StateHandler.h"
 
-StateHandler::StateHandler()
-{
-    //ctor
-}
+namespace CME {
+    StateHandler::StateHandler()
+    {
 
-StateHandler::~StateHandler()
-{
-    //dtor
+    }
+
+    StateHandler::~StateHandler()
+    {
+
+    }
+
+
+
+    void StateHandler::request(IState* state_req, Request type_req)
+    {
+
+    }
 }

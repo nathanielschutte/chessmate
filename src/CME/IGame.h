@@ -11,45 +11,44 @@
 namespace CME {
     class IGame {
         public:
-            IGame(FileLogger& logger);
+            IGame();
 
             virtual ~IGame();
 
-            int runGame();
+            virtual int runGame() = 0;
 
         protected:
 
-            FileLogger logger;
+            InputHandler input_handler;
 
-            InputHandler input_handler
+            StateHandler state_handler;
 
-            StateHandler state_handler
+            IState* state_cur;
 
-            IState state_cur;
+            bool m_running;
 
-            // InputHandler
-            // StateHandler
+            int m_exit_code = 0;
 
             /**
             * Chance to init before loop
             * init Handlers and add components to them
             */
-            void init(void);
+            virtual void init(void) = 0;
 
             /**
             * Game loop
             */
-            int gameLoop(void);
+            virtual int gameLoop(void) = 0;
 
             /**
             * Internal update called from game loop
             */
-            void update(sf::RenderWindow& window, const float time_delta);
+            virtual void update(sf::RenderWindow& window, const float time_delta) = 0;
 
             /**
             * Internal draw called from game loop
             */
-            void draw(sf::RenderTarget& target, const float interp);
+            virtual void draw(sf::RenderTarget& target, const float interp) = 0;
 
     };
 }
