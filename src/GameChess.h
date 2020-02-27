@@ -10,8 +10,13 @@ const float FPS = 240.0f;
 
 class GameChess : public CME::IGame
 {
+    const CME::ref_id GAME = 0;
+    const CME::ref_id START = 1;
+    const CME::ref_id POSTGAME = 2;
+    const CME::ref_id HOLD = 3;
+
     public:
-        GameChess();
+        GameChess(CME::FileLogger* log);
 
         ~GameChess();
 
@@ -21,7 +26,11 @@ class GameChess : public CME::IGame
 
     private:
 
+        // ===========================
+
         void init(void);
+
+        void clean(void);
 
         int gameLoop(void);
 

@@ -1,39 +1,46 @@
 #ifndef IGAME_H
 #define IGAME_H
 
-#include <SFML/Graphics.hpp>
-
 #include "FileLogger.h"
 #include "InputHandler.h"
 #include "StateHandler.h"
-#include "IState.h"
 
 namespace CME {
     class IGame {
         public:
             IGame();
 
-            virtual ~IGame();
+            ~IGame();
 
             virtual int runGame() = 0;
 
+            inline InputHandler* getInputHandler() { return input_handler; }
+            inline StateHandler* getStateHandler() { return state_handler; }
+            inline FileLogger* getFileLogger() { return logger; }
+
         protected:
 
-            InputHandler input_handler;
+            InputHandler* input_handler;
 
-            StateHandler state_handler;
+            StateHandler* state_handler;
 
-            IState* state_cur;
+            FileLogger* logger;
 
             bool m_running;
 
             int m_exit_code = 0;
+
 
             /**
             * Chance to init before loop
             * init Handlers and add components to them
             */
             virtual void init(void) = 0;
+
+            /**
+            * Chance to clean before deconstruct
+            */
+            virtual void clean(void) = 0;
 
             /**
             * Game loop

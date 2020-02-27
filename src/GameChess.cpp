@@ -2,12 +2,10 @@
 
 using namespace sf;
 
-CircleShape shape(20.f);
 
-GameChess::GameChess()
+GameChess::GameChess(CME::FileLogger* log)
 {
-    m_pos = 20.0f;
-    m_speed = SPEED;
+    logger = log;
 }
 
 GameChess::~GameChess()
@@ -39,10 +37,30 @@ int GameChess::runGame()
 */
 void GameChess::init(void)
 {
-    // TODO: read from config file
+    input_handler = new CME::InputHandler();
+    state_handler = new CME::StateHandler();
 
-    // add game states
-    // set initial game state
+    // TODO: read saves ? player data, maybe separate handler?
+    state_handler->init();
+    state_handler->addState(GAME, (CME::IState *) new CME::StateGame());
+
+    // set initial game state before first update
+    state_handler->setInitialState(GAME);
+}
+
+/**
+* Cleanup
+*/
+void GameChess::clean()
+{
+    logger->logMessage("Cleaning up GameChess...");
+    logger->logMessage("Cleaning game states...");
+    delete state_handler;
+
+    logger->logMessage("Removing input handler...");
+    delete input_handler;
+
+    logger->logMessage("Done. Exiting game.");
 }
 
 /**
@@ -106,7 +124,7 @@ int GameChess::gameLoop(void)
             updates = 0;
         }
 
-        sf::sleep(sf::milliseconds(1));
+        sf::sleep(sf::milliseconds(2));
     }
 
     return 0;
@@ -128,18 +146,25 @@ void GameChess::update(sf::RenderWindow& window, const float time_delta)
         }
     }
 
-    if(m_pos > 880 || m_pos < 20)
+    // check for state change before updating
+    // assuming low load for now, consider a slightly longer update
+    if(state_handler.requestFlag())
     {
-        m_speed *= -1;
+        // pre loading
+
+        try
+        {
+            state_handler.fulfillRequest();
+        }
+        catch (char* err_msg)
+        {
+            logger.logMessage(err_msg);
+        }
+
+        // post loading
     }
 
-    m_pos += m_speed*time_delta;
-
-    shape.setPosition(m_pos, 150.0f);
-
-    // the rest
-
-    // call state update
+    state_handler.updateCurrentState(window, time_delta);
 }
 
 
@@ -148,5 +173,7 @@ void GameChess::update(sf::RenderWindow& window, const float time_delta)
 */
 void GameChess::draw(sf::RenderTarget& target, const float interp)
 {
-    target.draw(shape);
+    // this might be it for now
+
+    state_handler.drawCurrentState(target, interp);
 }

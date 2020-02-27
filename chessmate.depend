@@ -4,7 +4,7 @@
 	"IPlayer.h"
 	"chess.h"
 
-1580102699 source:c:\users\nate\documents\projects\chessmate\src\main.cpp
+1582789838 source:c:\users\nate\documents\projects\chessmate\src\main.cpp
 	<assert.h>
 	<stddef.h>
 	"GameChess.h"
@@ -20,7 +20,7 @@
 1579206323 source:c:\users\nate\documents\projects\chessmate\src\cme\iplayer.cpp
 	"IPlayer.h"
 
-1580098260 c:\users\nate\documents\projects\chessmate\src\cme\iplayer.h
+1582784547 c:\users\nate\documents\projects\chessmate\src\cme\iplayer.h
 
 1579203407 c:\users\nate\documents\projects\chessmate\src\cme\chess.h
 	"CME.h"
@@ -448,32 +448,36 @@
 1579205074 source:c:\users\nate\documents\projects\chessmate\src\cme\istate.cpp
 	"IState.h"
 
-1579205061 c:\users\nate\documents\projects\chessmate\src\cme\istate.h
+1582795285 c:\users\nate\documents\projects\chessmate\src\cme\istate.h
+	<SFML/Graphics.hpp>
 
 1580098627 source:c:\users\nate\documents\projects\chessmate\src\cme\statehandler.cpp
 	"StateHandler.h"
 
-1580098619 c:\users\nate\documents\projects\chessmate\src\cme\statehandler.h
+1582795989 c:\users\nate\documents\projects\chessmate\src\cme\statehandler.h
+	"IState.h"
+	"CME/IGame.h"
+	<stddef.h>
+	<SFML/Graphics.hpp>
 
 1580102790 source:c:\users\nate\documents\projects\chessmate\src\cme\igame.cpp
 	"IGame.h"
 
-1580103497 c:\users\nate\documents\projects\chessmate\src\cme\igame.h
-	<SFML/Graphics.hpp>
+1582796190 c:\users\nate\documents\projects\chessmate\src\cme\igame.h
 	"FileLogger.h"
 	"InputHandler.h"
 	"StateHandler.h"
-	"IState.h"
 
-1580105171 c:\users\nate\documents\projects\chessmate\src\gamechess.h
+1582793311 c:\users\nate\documents\projects\chessmate\src\gamechess.h
 	"CME/IGame.h"
 	<stdio.h>
 
-1579205099 source:c:\users\nate\documents\projects\chessmate\src\cme\stategame.cpp
+1582795568 source:c:\users\nate\documents\projects\chessmate\src\cme\stategame.cpp
 	"StateGame.h"
 
-1580099170 c:\users\nate\documents\projects\chessmate\src\cme\stategame.h
+1582795302 c:\users\nate\documents\projects\chessmate\src\cme\stategame.h
 	"IState.h"
+	<fstream>
 
 1580104925 source:c:\users\nate\documents\projects\chessmate\src\gamechess.cpp
 	"GameChess.h"

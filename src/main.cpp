@@ -18,13 +18,13 @@ int main(int argc, char* argv[]) {
     CME::FileLogger logger("output.txt", true);
     logger.setActive(true);
 
-    GameChess* chess = new(std::nothrow) GameChess();
+    GameChess* chess = new(std::nothrow) GameChess(&logger);
     assert(NULL != chess && "main() failed to create game");
 
     exitCode = chess->runGame();
 
     delete chess;
-    chess = NULL;
+    chess = nullptr;
 
     return exitCode;
 }
