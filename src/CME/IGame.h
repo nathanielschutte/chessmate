@@ -6,25 +6,25 @@
 #include "StateHandler.h"
 
 namespace CME {
+
+    class StateHandler;
+    class InputHandler;
+
     class IGame {
         public:
             IGame();
-
             ~IGame();
 
-            virtual int runGame() = 0;
+            virtual int runGame();
 
-            inline InputHandler* getInputHandler() { return input_handler; }
-            inline StateHandler* getStateHandler() { return state_handler; }
-            inline FileLogger* getFileLogger() { return logger; }
+            inline const InputHandler& getInputHandler() { return input_handler; }
+            inline const StateHandler& getStateHandler() { return state_handler; }
 
         protected:
 
-            InputHandler* input_handler;
+            InputHandler input_handler;
 
-            StateHandler* state_handler;
-
-            FileLogger* logger;
+            StateHandler state_handler;
 
             bool m_running;
 

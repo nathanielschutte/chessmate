@@ -8,4 +8,6 @@
 #include "IState.h"
 #include "IPlayer.h"
 
+#include <SFML/Graphics.hpp>
+
 #endif // CME_H_INCLUDED

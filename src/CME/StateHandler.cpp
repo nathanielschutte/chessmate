@@ -1,9 +1,9 @@
 #include "StateHandler.h"
 
 namespace CME {
-    StateHandler::StateHandler(IGame* game)
+    StateHandler::StateHandler(const IGame& game) : m_game(game)
     {
-        m_game = game;
+
     }
 
     StateHandler::~StateHandler()
@@ -12,10 +12,12 @@ namespace CME {
         for(int i = 0; i < states.size(); i++)
         {
             states.at(i).state_it->clean();
+            std::string out = "Cleaning state [" + std::to_string(i) + "]";
+            m_game.getFileLogger().logMessage(out.c_str());
         }
     }
 
-    // nothing really yet
+    // hold IGame reference
     void StateHandler::init()
     {
         request_flag = NONE;

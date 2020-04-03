@@ -3,9 +3,9 @@
 using namespace sf;
 
 
-GameChess::GameChess(CME::FileLogger* log)
+GameChess::GameChess(const CME::FileLogger& log) : logger(log)
 {
-    logger = log;
+
 }
 
 GameChess::~GameChess()
@@ -37,15 +37,13 @@ int GameChess::runGame()
 */
 void GameChess::init(void)
 {
-    input_handler = new CME::InputHandler();
-    state_handler = new CME::StateHandler();
 
     // TODO: read saves ? player data, maybe separate handler?
-    state_handler->init();
-    state_handler->addState(GAME, (CME::IState *) new CME::StateGame());
+    state_handler.init(*this);
+    state_handler.addState(GAME, (CME::IState *) new CME::StateGame());
 
     // set initial game state before first update
-    state_handler->setInitialState(GAME);
+    state_handler.setInitialState(GAME);
 }
 
 /**
@@ -53,14 +51,12 @@ void GameChess::init(void)
 */
 void GameChess::clean()
 {
-    logger->logMessage("Cleaning up GameChess...");
-    logger->logMessage("Cleaning game states...");
-    delete state_handler;
+    logger.logMessage("Cleaning up GameChess...");
+    logger.logMessage("Cleaning game states...");
 
-    logger->logMessage("Removing input handler...");
-    delete input_handler;
+    logger.logMessage("Removing input handler...");
 
-    logger->logMessage("Done. Exiting game.");
+    logger.logMessage("Done. Exiting game.");
 }
 
 /**

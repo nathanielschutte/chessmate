@@ -2,12 +2,13 @@
 #define STATEHANDLER_H
 
 #include "IState.h"
-#include "CME/IGame.h"
-
+#include "IGame.h"
+#include <string>
 #include <stddef.h>
-#include <SFML/Graphics.hpp>
 
 namespace CME {
+
+    class IGame;
 
     typedef int req_t;
     typedef int ref_id;
@@ -21,15 +22,18 @@ namespace CME {
     {
         const ref_id HOLD = -1;
 
-        const req_t NONE = 0;
-        const req_t CHANGE = 1;
-        const req_t RESET = 2;
-
         public:
-            StateHandler(IGame* game);
+
+            enum req_t {
+                NONE = 0,
+                CHANGE = 1,
+                RESET = 2
+            };
+
+            StateHandler();
             virtual ~StateHandler();
 
-            void init();
+            void init(const IGame& game);
 
             void addState(ref_id state_ref, IState* state_it);
 
@@ -53,7 +57,7 @@ namespace CME {
         protected:
 
         private:
-            IGame* m_game;
+            IGame& m_game; // hold reference to game class (access logger and other handlers)
             IState* state_cur; // current, active state
             IState* state_req; // requested state
 

@@ -2,11 +2,15 @@
 #define GAMECHESS_H
 
 #include "CME/IGame.h"
+#include "CME.h"
 
+#include <string>
 #include <stdio.h>
 
 const bool DEBUG = true;
 const float FPS = 240.0f;
+
+class FileLogger;
 
 class GameChess : public CME::IGame
 {
@@ -16,15 +20,19 @@ class GameChess : public CME::IGame
     const CME::ref_id HOLD = 3;
 
     public:
-        GameChess(CME::FileLogger* log);
+        GameChess(CME::FileLogger& log);
 
         ~GameChess();
 
         int runGame();
 
+        inline const FileLogger& getFileLogger() { return logger; }
+
     protected:
 
     private:
+
+        const FileLogger& logger;
 
         // ===========================
 
